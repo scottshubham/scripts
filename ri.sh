@@ -1,0 +1,3 @@
+sudo a2dissite
+*
+
