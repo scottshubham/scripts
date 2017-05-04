@@ -1,11 +1,18 @@
 a=$1
+mkdir $a
+cd $a
+cat >> index.html <<-EOF
+Your virtual host is working now! Hurray!
+EOF
+cd ..
+chmod -R 777 $a
 cat > /etc/apache2/sites-available/$a.conf <<- EOF
 <VirtualHost *:80>                                                                                                      
 ServerName $a.dev                                                                                                  
 ServerAlias www.$a.dev                                                                                             
 ServerAdmin webmaster@localhost                                                                                     
-DocumentRoot $HOME/projects/$a/                                                                         
-<Directory $HOME/projects/$a/>                                                                          
+DocumentRoot ${PWD}/$a/                                                                         
+<Directory ${PWD}/$a/>                                                                          
     Order allow,deny                                                                                                
     AllowOverride all                                                                                               
     Allow from all                                                                                                  
