@@ -27,10 +27,5 @@ cat >> /etc/hosts <<- EOF
 127.0.0.1   $a.dev
 127.0.0.1   www.$a.dev
 EOF
-ls /etc/apache2/sites-enabled > sa.txt
-while read name
-do
-    a2dissite $name
-done < sa.txt
 a2ensite $a.conf
 service apache2 reload
