@@ -3,6 +3,8 @@
 
 > rr.sh Script to disable all the presently enabled virtual hosts.
 
+> ea.sh Script to enable all the available virtual hosts.
+
 ###  Installation
 Git clone the repo:
 ```
