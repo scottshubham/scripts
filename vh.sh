@@ -1,7 +1,7 @@
 a=$1
 mkdir $a
 cd $a
-cat >> index.html <<-EOF
+cat > index.html <<-EOF
 Your virtual host is working now! Hurray!
 EOF
 cd ..
