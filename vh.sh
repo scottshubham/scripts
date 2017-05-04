@@ -4,8 +4,8 @@ cat > /etc/apache2/sites-available/$a.conf <<- EOF
 ServerName $a.dev                                                                                                  
 ServerAlias www.$a.dev                                                                                             
 ServerAdmin webmaster@localhost                                                                                     
-DocumentRoot /home/sybox-orig/projects/$a/                                                                         
-<Directory /home/sybox-orig/projects/$a/>                                                                          
+DocumentRoot $HOME/projects/$a/                                                                         
+<Directory $HOME/projects/$a/>                                                                          
     Order allow,deny                                                                                                
     AllowOverride all                                                                                               
     Allow from all                                                                                                  
